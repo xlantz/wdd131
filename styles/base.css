@@ -68,6 +68,20 @@ main {
     align-items: center;
 }
 
+.card .content2 {
+    display: flex;
+    align-items: center;
+}
+
+.card .content2 img{
+    padding-left: 20px;
+}
+
+.card .content img{
+    border: 1px solid #0B3954;
+    border-radius: 10px;
+}
+
 .card img {
     width: 300px;
     max-width: 100%;
@@ -83,8 +97,6 @@ main {
 img {
     max-width: 100%;
     height: auto;
-    border: 1px solid grey;
-    border-radius: 5px;
 }
 
 .card ul{
