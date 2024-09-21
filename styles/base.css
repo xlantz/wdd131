@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header {
@@ -97,6 +98,13 @@ main {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.contentSeparator{
+    text-align: center;
+    border-bottom: 1px solid #0B3954;
+    margin: 10px;
+    font-size: 125%;
 }
 
 .card ul{
