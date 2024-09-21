@@ -18,7 +18,7 @@ header h1{
     list-style: none;
     padding: 15px;
     margin: 0;
-    background-color: #4CAF50;
+    background-color: #0B3954;
     border-radius: 0px;
 }
 
@@ -33,7 +33,7 @@ header h1{
 }
 
 .navigation a:hover {
-    color:black;
+    color:#A2D6F9;
 }
 
 main {
@@ -45,11 +45,12 @@ main {
   }
 
   main h2{
+    color: white;
     text-align: center;
   }
 
 .header-box{
-    background-color: aqua;
+    background-color: #0B3954;
     padding: 15px;
     margin-bottom: 15px;
     border-top-left-radius: 10px;
@@ -101,11 +102,12 @@ img {
 }
 
 footer{
-    background-color: #f0f0f0;
+    background-color: #0B3954;
     padding: 20px;
     margin: 20px;
 }
 
 footer p{
+    color: white;
     text-align: center;
 }
