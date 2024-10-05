@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Temples Album. This is an album of my favorite LDS temples.">
+    <meta name="author" content="Alex Lanterman">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Iceland</title>
+</head>
+<body>
+
+    <header>
+        <h1>Iceland</h1>
+    </header>
+
+    <main>
+        <div class="hero" id="hero"></div>
+        
+        <div class="content-box top-left">
+            <div class="box-title">
+                <h2>Data</h2>
+            </div>
+            <ul>
+                <li>Area: 39,769 mi²</li>
+                <li>Population: 396,960</li>
+                <li>Capital: Reykjavík</li>
+                <li>Language(s): Icelandic</li>
+                <li>Currency: Króna</li>
+                <li>Time Zone: UTC +0</li>
+                <li>Calling Code: +354</li>
+                <li>Internet TLD: .is</li>
+            </ul>
+        </div>
+        
+        <div class="content-box bottom-right">
+            <div class="box-title">
+                <h2>Weather ⛅</h2>
+            </div>
+            <ul>
+                <li>Temperature: <span id="temperature"></span> °F</li>
+                <li>Conditions: Fair</li>
+                <li>Wind: <span id="windSpeed"></span> Mph</li>
+                <li>Wind Chill: <span id="windChill"></span> </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p><span id="currentYear"></span></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>
