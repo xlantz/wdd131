@@ -115,70 +115,76 @@ const temples = [
   ];
 
  // Display temples
- const templeGrid = document.getElementById('templeGrid');
- temples.forEach(temple => {
-     const templeCard = document.createElement('div');
-     templeCard.classList.add('temple-card');
+ function displayTemples(templesToDisplay) {
+    // Clear existing temple cards
+    templeGrid.innerHTML = '';
 
-     const templeName = document.createElement('h3');
-     templeName.textContent = temple.templeName;
+    // Loop through the filtered temples and create cards
+    templesToDisplay.forEach(temple => {
+        const templeCard = document.createElement('div');
+        templeCard.classList.add('temple-card');
 
-     const templeLocation = document.createElement('p');
-     templeLocation.textContent = `Location: ${temple.location}`;
+        const templeName = document.createElement('h3');
+        templeName.textContent = temple.templeName;
 
-     const templeDedication = document.createElement('p');
-     templeDedication.textContent = `Dedicated: ${temple.dedicated}`;
+        const templeLocation = document.createElement('p');
+        templeLocation.textContent = `Location: ${temple.location}`;
 
-     const templeArea = document.createElement('p');
-     templeArea.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+        const templeDedication = document.createElement('p');
+        templeDedication.textContent = `Dedicated: ${temple.dedicated}`;
 
-     const templeImage = document.createElement('img');
-     templeImage.src = temple.imageUrl;
-     templeImage.alt = `${temple.templeName} - ${temple.location}`;
-     templeImage.loading = 'lazy'; // Native lazy loading
+        const templeArea = document.createElement('p');
+        templeArea.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
 
-     // Append elements to temple card
-     templeCard.appendChild(templeImage);
-     templeCard.appendChild(templeName);
-     templeCard.appendChild(templeLocation);
-     templeCard.appendChild(templeDedication);
-     templeCard.appendChild(templeArea);
+        const templeImage = document.createElement('img');
+        templeImage.src = temple.imageUrl;
+        templeImage.alt = `${temple.templeName} - ${temple.location}`;
+        templeImage.loading = 'lazy'; // Native lazy loading
 
-     // Append temple card to the grid
-     templeGrid.appendChild(templeCard);
- });
+        // Append elements to temple card
+        templeCard.appendChild(templeImage);
+        templeCard.appendChild(templeName);
+        templeCard.appendChild(templeLocation);
+        templeCard.appendChild(templeDedication);
+        templeCard.appendChild(templeArea);
 
- // Initially display all temples
- displayTemples(temples);
+        // Append temple card to the grid
+        templeGrid.appendChild(templeCard);
+    });
+}
 
- // Event listeners for navigation items
- document.querySelector('ul.navigation').addEventListener('click', function(e) {
-     if (e.target.tagName === 'A') {
-         e.preventDefault(); // Prevent default anchor behavior
 
-         const filter = e.target.textContent;
+// Initially display all temples
+displayTemples(temples);
 
-         let filteredTemples;
-         switch (filter) {
-             case 'Old':
-                 filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
-                 break;
-             case 'New':
-                 filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
-                 break;
-             case 'Large':
-                 filteredTemples = temples.filter(temple => temple.area > 90000);
-                 break;
-             case 'Small':
-                 filteredTemples = temples.filter(temple => temple.area < 10000);
-                 break;
-             case 'Home':
-             default:
-                 filteredTemples = temples; // Show all temples
-                 break;
-         }
+// Event listeners for navigation items
+document.querySelector('ul.navigation').addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+        e.preventDefault(); // Prevent default anchor behavior
 
-         // Display the filtered temples
-         displayTemples(filteredTemples);
-     }
- });
+        const filter = e.target.textContent;
+
+        let filteredTemples;
+        switch (filter) {
+            case 'Old':
+                filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+                break;
+            case 'New':
+                filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+                break;
+            case 'Large':
+                filteredTemples = temples.filter(temple => temple.area > 90000);
+                break;
+            case 'Small':
+                filteredTemples = temples.filter(temple => temple.area < 10000);
+                break;
+            case 'Home':
+            default:
+                filteredTemples = temples; // Show all temples
+                break;
+        }
+
+        // Display the filtered temples
+        displayTemples(filteredTemples);
+    }
+});
