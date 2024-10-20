@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Product Review. This is a product review page.">
+    <meta name="author" content="Alex Lanterman">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <form method="GET" action="review.html">
+                <label for="product-name">Product Name:</label>
+                <select id="product-name" name="product-name">
+                    <option value="Product 1">Scissors</option>
+                    <option value="Product 2">Lawn Mower</option>
+                    <option value="Product 3">Game System</option>
+                </select>
+
+                <label>Rating:</label>
+                <div class="star-rating">
+                    <div class="stars">
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">★</label>
+                    </div>
+                </div>
+
+                <label for="installation-date">Date of Installation:</label>
+                <div class="date-input">
+                    <input type="text" id="installation-date" name="installation-date" placeholder="mm/dd/yyyy">
+                    <span class="calendar-icon">📅</span>
+                </div>
+
+                <label>What did you like about the product?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="Quality"> Quality</label>
+                    <label><input type="checkbox" name="features" value="Price"> Price</label>
+                    <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="Design"> Design</label>
+                    <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+                </div>
+
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" rows="4" placeholder="Write your review here..."></textarea>
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+
+                <button type="submit">Post Review</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p id="footer-text">
+            <span id="currentYear"></span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

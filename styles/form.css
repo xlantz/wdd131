@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #0056b3;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Ensure space for the footer */
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Set a max width for the form */
+    margin: auto; /* Center the form */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select, .date-input, input[type="text"], textarea {
+    width: 100%;
+    max-width: 100%; /* Ensure no overflow */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.stars {
+    display: flex;
+}
+
+.star-rating input {
+    display: none; 
+}
+
+.star-rating label {
+    font-size: 40px; /* Size of the stars */
+    color: #ccc; /* Default star color */
+    cursor: pointer; /* Change cursor on hover */
+    transition: color 0.2s; /* Smooth color transition */
+}
+
+.star-rating input:checked ~ label {
+    color: #FFD700; 
+}
+
+.star-rating input:checked + label {
+    color: #FFD700; 
+}
+
+/* Style the stars on hover */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #FFD700; 
+}
+
+.date-input {
+    position: relative; 
+}
+
+.date-input input[type="text"] {
+    padding-right: 30px; /* Add padding to prevent text overlap with icon */
+}
+
+.calendar-icon {
+    position: absolute; /* Position the icon absolutely within the relative container */
+    right: 10px; /* Space from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to align vertically */
+    pointer-events: none; /* Prevent the icon from capturing click events */
+    
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .star-rating label {
+        font-size: 18px; 
+    }
+}
