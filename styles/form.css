@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans font */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -98,7 +98,6 @@ select, .date-input, input[type="text"], textarea {
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust to align vertically */
     pointer-events: none; /* Prevent the icon from capturing click events */
-    
 }
 
 .checkbox-group {
