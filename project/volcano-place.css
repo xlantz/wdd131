@@ -25,6 +25,12 @@ nav li {
     margin: 0 15px; 
 }
 
+.hero-video {
+    width: 100%; 
+    height: auto; 
+    
+}
+
 footer{
     background-color: #465362;
     text-align: center;
