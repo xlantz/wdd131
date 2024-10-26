@@ -1,0 +1,32 @@
+.pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+h1{
+    text-align: center;
+    background-color: #F13030;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+nav li {
+    margin: 0 15px; 
+}
+
+footer{
+    background-color: #465362;
+    text-align: center;
+    color: white;
+}
