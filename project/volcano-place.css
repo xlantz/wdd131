@@ -1,16 +1,32 @@
-.pt-serif-regular {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-h1{
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0; 
+    overflow-x: hidden; 
+}
+
+h1 {
     text-align: center;
     background-color: #F13030;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.nav-container {
+    background-color: #465362; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin: 20px 0; 
+    width: 100%; 
 }
 
 nav {
     text-align: center;
+    width: 100%; 
 }
 
 nav ul {
@@ -19,20 +35,109 @@ nav ul {
     margin: 0; 
     display: flex; 
     justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 nav li {
     margin: 0 15px; 
+    transition: color 0.3s, text-decoration 0.3s; 
+}
+
+nav a {
+    text-decoration: none; 
+    color: white; 
+    padding: 10px 15px; 
+}
+
+nav a:hover {
+    color: #F13030;
+    text-decoration: overline; 
+}
+
+nav li:hover {
+    color: #F13030; 
 }
 
 .hero-video {
     width: 100%; 
-    height: auto; 
-    
+    height: auto;     
 }
 
-footer{
+.site_purpose {
+    text-align: center; 
+    margin: 20px auto; 
+    max-width: 800px; 
+    padding: 20px; 
+    border: 2px solid #F13030; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.site_purpose h3 {
+    margin-bottom: 15px; 
+}
+
+.site_purpose ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.site_purpose li {
+    text-align: left; 
+    margin: 5px 0; 
+    display: inline-block; 
+    width: 100%; 
+}
+
+footer {
     background-color: #465362;
     text-align: center;
     color: white;
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        width: 100%; 
+    }
+}
+
+.hamburger {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block; 
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column; 
+        width: 100%; 
+        background-color: #d3d3d3;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        padding: 0; 
+        margin: 0; 
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
 }

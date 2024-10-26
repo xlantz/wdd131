@@ -8,31 +8,50 @@
     <link rel="stylesheet" href="volcano-place.css">
     <script src="volcano-place.js" defer></script>
     <title>My Site Plan</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style>
 </head>
 <body>
     <header>
-        <h1>
-            Volcano Place
-        </h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Map</li>
-                <li>Deadliest</li>
-            </ul>
-        </nav>
+        <h1>Volcano Place</h1>
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger-button">☰</button>
+            <nav id="navbar" class="hidden">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Deadliest</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <main>
         <video class="hero-video" autoplay muted loop>
             <source src="volcano-home-hero.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="site_purpose">        
+            <h3>
+                We will look at:
+            </h3>
+            <ul>
+                <li>
+                    What was the deadliest volcano of all time?
+                </li>
+                <li>
+                    What was the deadliest volcano in the past 20 years?
+                </li>
+                <li>
+                    Where are most of the world's volcanoes?
+                </li>
+                <li>
+                    What is the most visited volcano?
+                </li>
+            </ul>
+        </div>
     </main>
     <footer>
-        My Site Plan | Volcano Place
+        <p><span id="currentYear"></span></p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
