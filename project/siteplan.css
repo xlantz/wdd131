@@ -1,0 +1,36 @@
+.pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+h1{
+    text-align: center;
+    background-color: #F13030;
+}
+.red-text{
+    color:#F13030;
+}
+
+.black-text{
+    color:black;
+
+}
+
+.white-text{
+    color: white;
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+.grey-text{
+    color:#465362;
+}
+
+footer{
+    background-color: #465362;
+    text-align: center;
+    color: white;
+}
