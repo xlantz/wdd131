@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const products = [
+        { id: 'product1', name: 'Scissors' },
+        { id: 'product2', name: 'Lawn Mower' },
+        { id: 'product3', name: 'Game System' }
+    ];
+
+    // Populate the product select element
+    const productSelect = document.getElementById('product-name');
+    products.forEach(product => {
+        const option = document.createElement('option');
+        option.value = product.id;
+        option.textContent = product.name;
+        productSelect.appendChild(option);
+    });
+
     // Initialize the review count from local storage
     let reviewCount = localStorage.getItem('reviewCount') || 0;
     updateReviewCount();
@@ -6,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form from submitting normally
         
-        const productName = document.getElementById('product-name').value;
+        const productName = productSelect.value; // Use the selected product id
         const rating = document.querySelector('input[name="rating"]:checked');
         const installationDate = document.getElementById('installation-date').value;
         const review = document.getElementById('review').value;
