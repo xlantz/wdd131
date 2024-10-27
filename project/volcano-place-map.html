@@ -7,7 +7,7 @@
     <meta name="author" content="Alex Lanterman">
     <link rel="stylesheet" href="volcano-place.css">
     <script src="volcano-place.js" defer></script>
-    <title>Home</title>
+    <title>Map</title>
 </head>
 <body>
     <header>
@@ -25,29 +25,29 @@
     </header>
     
     <main>
-        <video class="hero-video" autoplay muted loop>
-            <source src="volcano-home-hero.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="site_purpose">        
-            <h3>
-                We will look at:
-            </h3>
-            <ul>
-                <li>
-                    What was the deadliest volcano of all time?
-                </li>
-                <li>
-                    What was the deadliest volcano in the past 20 years?
-                </li>
-                <li>
-                    Where are most of the world's volcanoes?
-                </li>
-                <li>
-                    What is the most visited volcano?
-                </li>
-            </ul>
+        <h3 class="map_title">
+           Map of All the Volcanoes in the World 
+        </h3>
+        <img data-src="volcano-map-world.jpg" alt="map of all of the volcanoes in the world" class="map_image lazy" loading="lazy">
+
+        <p class="country_most_volcanoes">
+            The country with the most volcanoes is the United States.<br>
+            There are 161 volcanoes in the US.
+        </p>
+
+        <h3 class="popular_volcano">
+            Most visited volcano:
+        </h3>
+        <div class="fuji-container">
+            <img data-src="mt-fuji-mobile.jpg" alt="Mt. Fuji (mobile)" class="visited_volcano lazy mobile" loading="lazy">
+            <img data-src="mt-fuji.jpg" alt="Mt. Fuji (desktop)" class="visited_volcano lazy desktop" loading="lazy">
+            <p class="fuji_info">
+                This volcano is Mt. Fuji. It is located in Japan.<br>
+                It has around 300,000 tourists visit it per year.<br>
+                Mt. Fuji is the most visited volcano in the world.
+            </p>
         </div>
+
     </main>
     <footer>
         <p><span id="currentYear"></span></p>

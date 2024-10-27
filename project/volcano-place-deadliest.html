@@ -7,7 +7,7 @@
     <meta name="author" content="Alex Lanterman">
     <link rel="stylesheet" href="volcano-place.css">
     <script src="volcano-place.js" defer></script>
-    <title>Home</title>
+    <title>Deadliest</title>
 </head>
 <body>
     <header>
@@ -25,29 +25,30 @@
     </header>
     
     <main>
-        <video class="hero-video" autoplay muted loop>
-            <source src="volcano-home-hero.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="site_purpose">        
-            <h3>
-                We will look at:
-            </h3>
-            <ul>
-                <li>
-                    What was the deadliest volcano of all time?
-                </li>
-                <li>
-                    What was the deadliest volcano in the past 20 years?
-                </li>
-                <li>
-                    Where are most of the world's volcanoes?
-                </li>
-                <li>
-                    What is the most visited volcano?
-                </li>
-            </ul>
+        <div class="tambora-container">
+            
+            <div class="tambora-content">
+                <h3>Deadliest of All Time</h3>
+                <p>
+                    The deadliest volcano of all time was Mt. Tambora in Indonesia.<br>
+                    It erupted in 1815 and estimated killing 71,000 people.<br>
+                    The picture is what's left of Mt. Tambora.
+                </p>
+            </div>
+            <img data-src="mt-tambora.jpg" alt="Mt. Tambora" class="mt_tambora lazy" loading="lazy">
         </div>
+
+        <div class="merapi-container">
+            <img data-src="mt-merapi.jpg" alt="Mt. Merapi" class="mt_merapi lazy" loading="lazy">
+            <div class="merapi-content">
+                <h3>Recent Deadliest</h3>
+                <p>
+                    The deadliest volcano in the past 20 years was Mt. Merapi in Indonesia.<br>
+                    It erupted in 2010 and estimated killing 300+ people.
+                </p>
+            </div>
+        </div>
+        
     </main>
     <footer>
         <p><span id="currentYear"></span></p>
