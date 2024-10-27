@@ -7,8 +7,10 @@
     <meta name="author" content="Alex Lanterman">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,9 +21,9 @@
             <form method="GET" action="review.html">
                 <label for="product-name">Product Name:</label>
                 <select id="product-name" name="product-name">
-                    <option value="Product 1">Scissors</option>
-                    <option value="Product 2">Lawn Mower</option>
-                    <option value="Product 3">Game System</option>
+                    <option value="product1">Scissors</option>
+                    <option value="product2">Lawn Mower</option>
+                    <option value="product3">Game System</option>
                 </select>
 
                 <label>Rating:</label>
@@ -42,8 +44,7 @@
 
                 <label for="installation-date">Date of Installation:</label>
                 <div class="date-input">
-                    <input type="text" id="installation-date" name="installation-date" placeholder="mm/dd/yyyy">
-                    <span class="calendar-icon">📅</span>
+                    <input type="date" id="installation-date" name="installation-date" required>
                 </div>
 
                 <label>What did you like about the product?</label>
@@ -59,7 +60,7 @@
                 <textarea id="review" name="review" rows="4" placeholder="Write your review here..."></textarea>
 
                 <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
                 <button type="submit">Post Review</button>
             </form>
@@ -72,8 +73,5 @@
         </p>
         <p id="lastModified"></p>
     </footer>
-    
-
-    <script src="script.js"></script>
 </body>
 </html>
